@@ -30,10 +30,5 @@
   when: docker_users
 
 # configuration
-- name: include setup-Docker-RedHat if ansible_os_family RedHat
-  include_tasks: setup-Docker-RedHat.yml
-  when: ansible_os_family == 'RedHat'
-
-- name: include setup-Docker-Debian if ansible_os_family Debian
-  include_tasks: setup-Docker-Debian.yml
-  when: ansible_os_family == 'Debian'
+- name: include setup-Docker
+  include_tasks: setup-Docker.yml
