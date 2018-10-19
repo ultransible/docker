@@ -1,0 +1,19 @@
+---
+language: python
+services: docker
+
+install:
+  # Install test dependencies.
+  - pip install molecule docker
+
+before_script:
+  - cd ../
+  - mv docker ultransible.docker
+  - cd ultransible.docker
+
+script:
+  # Run tests.
+  - molecule test
+
+notifications:
+webhooks: https://galaxy.ansible.com/api/v1/notifications/
