@@ -1,17 +1,20 @@
 ---
 - name: Ensure old versions of Docker are not installed.
-  package:
-    name: '{{ item }}'
+  apt:
+    name: '{{ docker_old_versions_Debian }}'
     state: absent
-  with_items:
-    - "{{ docker_old_versions_Debian }}"
+
+    #  package:
+    #    name: '{{ item }}'
+    #    state: absent
+    #  with_items:
+    #    - "{{ docker_old_versions_Debian }}"
 
 - name: Install role dependencies.
   apt:
-    name: '{{ item }}'
+    name: '{{ docker_dependencies_Debian }}'
     state: present
-  with_items:
-    - "{{ docker_dependencies_Debian }}"
+    autoclean: true
 
 - name: Add Docker apt key.
   apt_key:
