@@ -1,6 +1,6 @@
 # Ansible Role: Docker
 
-[![Build Status](https://travis-ci.org/ultransible/ansible-role-docker.svg?branch=master)](https://travis-ci.org/ultransible/ansible-role-docker)
+[![Build Status](https://travis-ci.org/ultransible/docker.svg?branch=master)](https://travis-ci.org/ultransible/docker)
 
 
 It is an [Ansible](http://www.ansible.com/home) role to:
