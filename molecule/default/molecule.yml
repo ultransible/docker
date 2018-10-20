@@ -22,7 +22,18 @@ platforms:
     volume_mounts:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
     privileged: true
-
+  - name: debian9
+    image: ultransible/debian_9_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
+  - name: debian10
+    image: ultransible/debian_10_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
 provisioner:
   name: ansible
   lint:
