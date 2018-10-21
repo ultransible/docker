@@ -28,6 +28,19 @@ platforms:
     volume_mounts:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
     privileged: true
+  - name: ubuntu18
+    image: ultransible/ubuntu_18_04_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
+  - name: ubuntu16
+    image: ultransible/ubuntu_16_04_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
+
 provisioner:
   name: ansible
   lint:
