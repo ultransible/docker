@@ -1,13 +1,7 @@
 ---
 language: python
 services: docker
-env:
-        #  - MOLECULE_DISTRO: centos_7_systemd:v1
-        #    MOLECULE_DISTRO_NAME: centos7
-  - MOLECULE_DISTRO: debian_9_systemd:v1
-    MOLECULE_DISTRO_NAME: debian9
-  - MOLECULE_DISTRO: ubuntu_16_04_systemd:v1
-    MOLECULE_DISTRO_NAME: ubuntu16
+
 install:
   # Install test dependencies.
   - pip install molecule docker
