@@ -10,21 +10,9 @@ lint:
     config-file: molecule/default/yaml-lint.yml
 
 platforms:
-  - name: centos7
-    image: ultransible/centos_7_systemd:v1
-    pre_build_image: true
-    volume_mounts:
-      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-    privileged: true
-  - name: debian8
-    image: ultransible/debian_8_systemd:v1
-    pre_build_image: true
-    volume_mounts:
-      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-    privileged: true
-  - name: debian9
-    image: ultransible/debian_9_systemd:v1
-    pre_build_image: true
+  - name: ${MOLECULE_DISTRO_NAME:-debian9}
+    image: ${MOLECULE_DISTRO:-debian_9_systemd:v1}
+    #    pre_build_image: true
     volume_mounts:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
     privileged: true

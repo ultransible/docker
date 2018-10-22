@@ -1,6 +1,14 @@
 ---
 language: python
 services: docker
+env:
+  matrix:
+    - MOLECULE_DISTRO_NAME: centos7
+      MOLECULE_DISTRO: ultransible/centos_7_systemd:v1
+    - MOLECULE_DISTRO_NAME: debian9
+      MOLECULE_DISTRO: ultransible/debian_9_systemd:v1
+    - MOLECULE_DISTRO_NAME: ubuntu18
+      MOLECULE_DISTRO: ultransible/ubuntu_18_04_systemd:v1
 
 install:
   - pip install molecule docker
