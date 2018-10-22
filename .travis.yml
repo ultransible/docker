@@ -3,7 +3,7 @@ language: python
 services: docker
 
 install:
-  # Install test dependencies.
+# Install test dependencies.
   - pip install molecule docker
 
 before_script:
