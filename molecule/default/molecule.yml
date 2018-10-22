@@ -10,8 +10,8 @@ lint:
     config-file: molecule/default/yaml-lint.yml
 
 platforms:
-  - name: ${MOLECULE_DISTRO_NAME:-debian9}
-    image: ultransible/${MOLECULE_DISTRO:-debian_9_systemd:v1}
+  - name: ${MOLECULE_DISTRO_NAME}
+    image: ultransible/${MOLECULE_DISTRO}
     command: /usr/lib/systemd/systemd
     pre_build_image: true
     volume_mounts:
