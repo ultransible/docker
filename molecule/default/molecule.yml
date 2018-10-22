@@ -1,4 +1,3 @@
----
 dependency:
   name: galaxy
 driver:
@@ -12,18 +11,18 @@ lint:
 platforms:
   - name: centos7
     image: ultransible/centos_7_systemd:v1
-    command: /usr/lib/systemd/systemd
-     pre_build_image: true
-     volume_mounts:
-       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-     privileged: true
-  -  image: ultransible/debian_9_systemd:v1
-     pre_build_image: true
-     volume_mounts:
-       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
-     privileged: true
-  - name: ubuntu18
-    image: ultransible/ubuntu_18_04_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
+  - name: debian8
+    image: ultransible/debian_8_systemd:v1
+    pre_build_image: true
+    volume_mounts:
+      - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    privileged: true
+  - name: debian9
+    image: ultransible/debian_9_systemd:v1
     pre_build_image: true
     volume_mounts:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
@@ -38,3 +37,4 @@ verifier:
   name: testinfra
   lint:
     name: flake8
+
