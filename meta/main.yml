@@ -1,11 +1,11 @@
 ---
-dependencies: []
-
 galaxy_info:
   author: ultransible
+  role_name: "docker"
   description: Docker for Linux.
+  author: ultransible
   company: ""
-  license: "license (BSD, MIT)"
+  license: "MIT"
   min_ansible_version: 2.4
   platforms:
     - name: EL
@@ -27,3 +27,9 @@ galaxy_info:
     - orchestration
     - compose
     - server
+    - "containers"
+    - "compose"
+    - "docker"
+    - "packaging"
+    - "system"
+dependencies: []
