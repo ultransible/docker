@@ -1,6 +1,5 @@
 ---
 galaxy_info:
-  author: ultransible
   role_name: "docker"
   description: Docker for Linux.
   author: ultransible
