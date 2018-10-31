@@ -11,10 +11,17 @@ lint:
 
 platforms:
   - name: ${MOLECULE_DISTRO_NAME:-debian9}
-    image: ${MOLECULE_DISTRO:-debian_9_systemd:v1}
-    #    pre_build_image: true
+    image: ${MOLECULE_DISTRO:-ultransible/debian_9_systemd:v1}
+    pre_build_image: true
     volume_mounts:
       - '/sys/fs/cgroup:/sys/fs/cgroup:ro'
+    security_opts:
+      - seccomp=unconfined
+    tmpfs:
+      - /run
+      - /run/lock
+    capabilities:
+      - SYS_ADMIN
     privileged: true
 provisioner:
   name: ansible
